@@ -8,6 +8,14 @@ import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListStuffAdmin extends React.Component {
+  
+  /**You can write the required propTypes directly from the class
+  /** Require an array of Stuff documents in the props. */
+  static propTypes = {
+    stuffs: PropTypes.array.isRequired,
+    ready: PropTypes.bool.isRequired,
+  };
+
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -37,12 +45,6 @@ class ListStuffAdmin extends React.Component {
     );
   }
 }
-
-/** Require an array of Stuff documents in the props. */
-ListStuffAdmin.propTypes = {
-  stuffs: PropTypes.array.isRequired,
-  ready: PropTypes.bool.isRequired,
-};
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
