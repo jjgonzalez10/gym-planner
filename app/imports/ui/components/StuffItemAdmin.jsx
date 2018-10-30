@@ -7,14 +7,16 @@ import { withRouter, Link } from 'react-router-dom';
 /** Renders a single row in the List Stuff (Admin) table. See pages/ListStuffAdmin.jsx. */
 class StuffItemAdmin extends React.Component {
   render() {
+    /** Destructuración de objetos */
+    const { name, repetitions, category, setps, _id } = this.props.stuff;
     return (
         <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.repetitions}</Table.Cell>
-          <Table.Cell>{this.props.stuff.category}</Table.Cell>
-          <Table.Cell>{this.props.stuff.steps}</Table.Cell>
+          <Table.Cell>{name}</Table.Cell>
+          <Table.Cell>{repetitions}</Table.Cell>
+          <Table.Cell>{category}</Table.Cell>
+          <Table.Cell>{steps}</Table.Cell>
           <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
+            <Link to={`/edit/${_id}`}>Edit</Link>
           </Table.Cell>
         </Table.Row>
     );
