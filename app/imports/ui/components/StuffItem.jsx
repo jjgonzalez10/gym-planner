@@ -8,8 +8,10 @@ import { Stuffs } from '/imports/api/stuff/stuff';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class StuffItem extends React.Component {
-
-	state={}
+  /** Inicializar el estado*/
+  state={
+	  rating: 0,
+  }
 
   handleRate = (e, { rating }) =>
    {
@@ -19,13 +21,19 @@ class StuffItem extends React.Component {
     });
 }	
   render() {
+    /* Usar destructuración de objetos */
+    const { name,
+	    repetitions,
+	    category,
+	    steps,
+	    owner } = this.props.stuff
     return (
         <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.repetitions}</Table.Cell>
-          <Table.Cell>{this.props.stuff.category}</Table.Cell>
-          <Table.Cell>{this.props.stuff.steps}</Table.Cell>
-          <Table.Cell>{this.props.stuff.owner}</Table.Cell>
+          <Table.Cell>{name}</Table.Cell>
+          <Table.Cell>{repetitions}</Table.Cell>
+          <Table.Cell>{category}</Table.Cell>
+          <Table.Cell>{steps}</Table.Cell>
+          <Table.Cell>{owner}</Table.Cell>
           <Table.Cell>
             <Rating icon='star' defaultRating={3} maxRating={5} onRate={this.handleRate}/>
           </Table.Cell>
