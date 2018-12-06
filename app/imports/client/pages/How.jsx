@@ -16,7 +16,7 @@ export default class How extends React.Component {
             </center>
             <h5 className="mt-3 mb-3">
               Gymplanner is an application that helps users find 
-              a proper routin for the gym
+              the right routine for the gym
             </h5>
           </div>
         </div>
@@ -29,9 +29,9 @@ export default class How extends React.Component {
               </span>
             </center>
             <br />
-            If you login as <b className="gym-text">Trainer</b>,
-            you have a few options than users doesnt have.
-            For example, you can add a routine or see all the routines
+            If you login as a<b className="gym-text">Trainer</b>,
+            you have a few options that other users dont.
+            For example, you can add a new routine.
           </div>
           <div className="col-md-6 col-sm-12 mb-3">
             <center>
@@ -41,9 +41,9 @@ export default class How extends React.Component {
               </span>
             </center>
             <br />
-            If you login as <b className="gym-text">user</b>,you only can see 
-            the list of routines that the trainers had already pushed and you can 
-            rating all of them.Also,if you like a trainers's routine, you can always 
+            If you login as <b className="gym-text">user</b>,you may only see 
+            the list of routines that the trainers have already listed and you can 
+            rate all of them. Also,if you like a trainers's routine, you can always 
             contact him.
           </div>
           <div className="col-12">
