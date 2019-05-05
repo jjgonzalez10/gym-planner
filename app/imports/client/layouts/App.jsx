@@ -1,3 +1,5 @@
+//pueden tener las rutas en un archivo separado y no combinarlo con los componentes de react.
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
